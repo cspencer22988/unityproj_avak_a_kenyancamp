@@ -1,0 +1,341 @@
+{
+	"rooms": 
+		[
+			{
+				"r": "create_actors",
+				"actor_data": 
+					[
+						{
+							"actor_id": "FrontDoorTrigger",
+							"components": 
+								[
+									{
+										"type": "volume_trigger",
+										"volume_data": 
+											[
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															0,
+															0.818,
+															-4.715826
+														],
+													"extents": 
+														[
+															6,
+															2,
+															6
+														],
+													"rotation": 
+														[
+															0,
+															0,
+															0
+														]
+												}
+											],
+										"trigger_type": "local"
+									},
+									{
+										"type": "net_actor_node",
+										"inputs": 
+											[
+												{
+													"input_port": "on",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "frontDoorOpen",
+																		"wrap_mode": "once",
+																		"switch_method": "queue",
+																		"wait_method": "none"
+																	}
+															}
+														]
+												},
+												{
+													"input_port": "off",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "frontDoorClose",
+																		"wrap_mode": "once",
+																		"switch_method": "queue",
+																		"wait_method": "none"
+																	}
+															}
+														]
+												}
+											],
+										"outputs": 
+											[
+												{
+													"output_port": "volume_trigger_enter_first",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "FrontDoorTrigger",
+																"input_port": "on"
+															}
+														],
+													"restricted_types": 
+														[
+															"avakin",
+															"petkin"
+														]
+												},
+												{
+													"output_port": "volume_trigger_exit_all",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "FrontDoorTrigger",
+																"input_port": "off"
+															}
+														],
+													"restricted_types": 
+														[
+															"avakin",
+															"petkin"
+														]
+												}
+											]
+									},
+									{
+										"type": "model",
+										"version": 1,
+										"game_asset_url": "sceneref://Room_0/Interactive_Objects/FrontDoorTrigger",
+										"edit_apartment_animation": "frontDoorOpen",
+										"idle_animation": "frontDoorClose",
+										"idle_wrap_mode": "last_frame"
+									}
+								],
+							"actions": 
+								[
+									{
+										"a": "position",
+										"o": 
+											[
+												0,
+												0,
+												0
+											],
+										"uid": "local"
+									},
+									{
+										"a": "model_set_visible",
+										"uid": "local",
+										"p": 
+											{
+												"method": "Immediate",
+												"visible": true
+											}
+									}
+								]
+						},
+						{
+							"actor_id": "Bathroom_Door_Trigger",
+							"components": 
+								[
+									{
+										"type": "volume_trigger",
+										"volume_data": 
+											[
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															2.80124116,
+															0.885,
+															1.47200012
+														],
+													"extents": 
+														[
+															6,
+															2,
+															6
+														],
+													"rotation": 
+														[
+															0,
+															0,
+															0
+														]
+												}
+											],
+										"trigger_type": "local"
+									},
+									{
+										"type": "net_actor_node",
+										"inputs": 
+											[
+												{
+													"input_port": "on",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "BathroomDoorOpen",
+																		"wrap_mode": "once",
+																		"switch_method": "queue",
+																		"wait_method": "none"
+																	}
+															}
+														]
+												},
+												{
+													"input_port": "off",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "BathroomDoorClose",
+																		"wrap_mode": "once",
+																		"switch_method": "queue",
+																		"wait_method": "none"
+																	}
+															}
+														]
+												}
+											],
+										"outputs": 
+											[
+												{
+													"output_port": "volume_trigger_enter_first",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Bathroom_Door_Trigger",
+																"input_port": "on"
+															}
+														],
+													"restricted_types": 
+														[
+															"avakin",
+															"petkin"
+														]
+												},
+												{
+													"output_port": "volume_trigger_exit_all",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Bathroom_Door_Trigger",
+																"input_port": "off"
+															}
+														],
+													"restricted_types": 
+														[
+															"avakin",
+															"petkin"
+														]
+												}
+											]
+									},
+									{
+										"type": "model",
+										"version": 1,
+										"game_asset_url": "sceneref://Room_0/Interactive_Objects/Bathroom_Door_Trigger",
+										"edit_apartment_animation": "BathroomDoorOpen",
+										"idle_animation": "BathroomDoorClose",
+										"idle_wrap_mode": "last_frame"
+									}
+								],
+							"actions": 
+								[
+									{
+										"a": "position",
+										"o": 
+											[
+												0,
+												0,
+												0
+											],
+										"uid": "local"
+									},
+									{
+										"a": "model_set_visible",
+										"uid": "local",
+										"p": 
+											{
+												"method": "Immediate",
+												"visible": true
+											}
+									}
+								]
+						}
+					]
+			}
+		]
+}
